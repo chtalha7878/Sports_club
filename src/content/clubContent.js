@@ -77,8 +77,8 @@ export const clubContent = {
     ],
   },
   contact: {
-    phone: '+971 50 123 4567',
-    email: 'info@uaelionssc.ae',
-    location: 'Al Qusais, Dubai, UAE',
+    phone: '00971542797709',
+    email: 'contact@uaeloins.com',
+    location: 'UAE Loins Sports Club, Al Warqa 4 Dubai, United Arab Emirates',
   },
 };
