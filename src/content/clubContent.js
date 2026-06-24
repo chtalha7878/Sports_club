@@ -78,7 +78,7 @@ export const clubContent = {
   },
   contact: {
     phone: '00971542797709',
-    email: 'contact@uaeloins.com',
+    email: 'sohail@uaeloins.com',
     location: 'UAE Loins Sports Club, Al Warqa 4 Dubai, United Arab Emirates',
   },
 };
