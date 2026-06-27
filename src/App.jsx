@@ -147,7 +147,9 @@ function Contact() {
           </p>
           <div className="contact-details">
             <a href={`tel:${contact.phone.replaceAll(' ', '')}`}><Phone size={20} /> {contact.phone}</a>
-            <a href={`mailto:${contact.email}`}><Mail size={20} /> {contact.email}</a>
+            {contact.emails.map((email) => (
+              <a href={`mailto:${email}`} key={email}><Mail size={20} /> {email}</a>
+            ))}
             <span><MapPin size={20} /> {contact.location}</span>
           </div>
         </div>

@@ -79,6 +79,7 @@ export const clubContent = {
   contact: {
     phone: '00971542797709',
     email: 'sohail@uaelions.com',
+    emails: ['sohail@uaelions.com', 'sameer@uaelions.com'],
     location: 'UAE Lions Sports Club, Al Warqa 4 Dubai, United Arab Emirates',
   },
 };
