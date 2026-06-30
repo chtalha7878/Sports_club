@@ -50,6 +50,10 @@ section[id] {
   scroll-margin-top: 28px;
 }
 
+#gallery {
+  scroll-margin-top: 34px;
+}
+
 button,
 input,
 textarea {
@@ -348,6 +352,82 @@ p {
   font-weight: 800;
 }
 
+.gallery-section {
+  background: var(--white);
+}
+
+.gallery-section .section-heading p:not(.section-kicker) {
+  max-width: 660px;
+  margin: 16px auto 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.gallery-card {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--charcoal);
+  box-shadow: var(--shadow);
+}
+
+.gallery-card:nth-child(1),
+.gallery-card:nth-child(4),
+.gallery-card:nth-child(7),
+.gallery-card:nth-child(10) {
+  grid-column: span 2;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  transition: transform 240ms ease;
+}
+
+.gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(3, 18, 12, 0.72));
+}
+
+.gallery-card:hover img {
+  transform: scale(1.035);
+}
+
+.gallery-card-body {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1;
+  color: var(--white);
+}
+
+.gallery-card-body span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(202, 167, 90, 0.94);
+  color: #19150d;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.gallery-card-body h3 {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
 .events-section {
   padding: 78px 0;
   background:
@@ -549,8 +629,17 @@ p {
   }
 
   .value-grid,
-  .sports-grid {
+  .sports-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-card,
+  .gallery-card:nth-child(1),
+  .gallery-card:nth-child(4),
+  .gallery-card:nth-child(7),
+  .gallery-card:nth-child(10) {
+    grid-column: auto;
   }
 
   .footer-inner {
@@ -566,6 +655,11 @@ p {
 
   section[id] {
     scroll-margin-top: 86px;
+  }
+
+  #sports,
+  #gallery {
+    scroll-margin-top: 24px;
   }
 
   .container {

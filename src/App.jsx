@@ -3,6 +3,7 @@ import { useState } from 'react';
 import logoLightImage from './assets/uae-lions-logo-transparent-light.png';
 import logoImage from './assets/uae-lions-logo-transparent.png';
 import { clubContent } from './content/clubContent.js';
+import { galleryItems } from './content/galleryContent.js';
 
 function Logo({ compact = false }) {
   return (
@@ -14,7 +15,7 @@ function Logo({ compact = false }) {
 
 function Header() {
   const [open, setOpen] = useState(false);
-  const navItems = ['Home', 'About', 'Sports', 'Events', 'Contact'];
+  const navItems = ['Home', 'About', 'Sports', 'Gallery', 'Events', 'Contact'];
 
   return (
     <header className="site-header">
@@ -99,6 +100,33 @@ function Sports() {
                 <a href="#contact" aria-label={`Contact us for more details about ${sport.name}`}>
                   Contact us for more details
                 </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Gallery() {
+  return (
+    <section className="section gallery-section" id="gallery">
+      <div className="container">
+        <div className="section-heading">
+          <p className="section-kicker">Gallery</p>
+          <h2>Real club moments, training sessions, and match-day memories.</h2>
+          <p>
+            A mix of refined club photos and clean sports visuals prepared for cricket, hockey, and football updates.
+          </p>
+        </div>
+        <div className="gallery-grid">
+          {galleryItems.map((item) => (
+            <article className="gallery-card" key={`${item.category}-${item.title}`}>
+              <img src={item.image} alt={`${item.title} at UAE Lions Sports Club`} loading="lazy" />
+              <div className="gallery-card-body">
+                <span>{item.category}</span>
+                <h3>{item.title}</h3>
               </div>
             </article>
           ))}
@@ -193,6 +221,7 @@ export default function App() {
         <Hero />
         <About />
         <Sports />
+        <Gallery />
         <Events />
         <Contact />
       </main>
