@@ -145,11 +145,17 @@ function Contact() {
           <p>
             Whether you are an aspiring athlete, a parent, or a sports enthusiast, we would be pleased to hear from you.
           </p>
+          <div className="leader-list">
+            {contact.leaders.map((leader) => (
+              <article className="leader-contact" key={leader.email}>
+                <span>{leader.role}</span>
+                <h3>{leader.name}</h3>
+                <a href={`mailto:${leader.email}`}><Mail size={18} /> {leader.email}</a>
+              </article>
+            ))}
+          </div>
           <div className="contact-details">
             <a href={`tel:${contact.phone.replaceAll(' ', '')}`}><Phone size={20} /> {contact.phone}</a>
-            {contact.emails.map((email) => (
-              <a href={`mailto:${email}`} key={email}><Mail size={20} /> {email}</a>
-            ))}
             <span><MapPin size={20} /> {contact.location}</span>
           </div>
         </div>

@@ -80,6 +80,18 @@ export const clubContent = {
     phone: '00971542797709',
     email: 'sohail@uaelions.com',
     emails: ['sohail@uaelions.com', 'sameer@uaelions.com'],
+    leaders: [
+      {
+        role: 'President',
+        name: 'Mr Muhammad Sohail',
+        email: 'sohail@uaelions.com',
+      },
+      {
+        role: 'General Secretary',
+        name: 'Mr Sameer Christian',
+        email: 'sameer@uaelions.com',
+      },
+    ],
     location: 'UAE Lions Sports Club, Al Warqa 4 Dubai, United Arab Emirates',
   },
 };
